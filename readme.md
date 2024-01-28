@@ -39,30 +39,30 @@ Capabilities / BrowserOptions need to be added inorder to run the tests in Lambd
 - As TestNG parameters
 ```xml
     <parameter name="LTusername" value="YOUR_USERNAME" />
-	<parameter name="LTaccessKey" value="YOUR_ACCESSKEY" />
+    <parameter name="LTaccessKey" value="YOUR_ACCESSKEY" />
 ```
 
 - As System Properties
 ```xml
     <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-          <configuration>
-          <suiteXmlFiles>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.1</version>
+        <configuration>
+            <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-          <systemProperties>
-						<property>
-			              <name>LTusername</name>
-			              <value>${LTusername}</value>
-	           			</property>
-	           			<property>
-			              <name>LTaccessKey</name>
-			              <value>${LTaccessKey}</value>
-	           			</property>
-					</systemProperties>
+            </suiteXmlFiles>
+            <systemProperties>
+                <property>
+                    <name>LTusername</name>
+                    <value>${LTusername}</value>
+                </property>
+                <property>
+                    <name>LTaccessKey</name>
+                    <value>${LTaccessKey}</value>
+                </property>
+            </systemProperties>
         </configuration>
-        </plugin>
+    </plugin>
 ```
 - In this case, you will only be able to trigger the test from CLI
 
@@ -82,7 +82,7 @@ And you will be able to view the In Progress as well as Completed tests and thei
 
 Click on one of the builds and you will be able to see a detailed view of the test execution
 
-![Build Details](https://github.com/krishnapollu/lambdatest-demo/blob/main/images/build-details.png)
+![Test Details](https://github.com/krishnapollu/lambdatest-demo/blob/main/images/test-details.png)
 
 ## Detailed Documentation
 - [LambdaTest Support Docs](https://www.lambdatest.com/support/docs/)
