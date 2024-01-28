@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LambdaTestSuite">
+
+	<parameter name="appURL" value="https://www.saucedemo.com/v1/index.html" />
+    
+    <!--Provide the credentials if running this xml from an IDE as TestNG suite-->
+    <parameter name="LTusername" value="" />
+	<parameter name="LTaccessKey" value="" />
+
+	<test name="LambdaTest">
+		<classes>
+			<class name="com.testautomation.tests.Test01"/>
+		</classes>
+	</test>
+</suite>
