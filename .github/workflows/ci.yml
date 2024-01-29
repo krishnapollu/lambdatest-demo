@@ -1,0 +1,20 @@
+name: LambdaTest Execution
+
+on
+  push: 
+    branches: main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Build and Test
+        run: mvn clean test -DLTusername=${{}} -DLTestaccessKey=${{}}
+
+      - name: Reports Upload
+        uses: actions/upload-artifact@v4
+        with: reports.zip
+        path: /target/surefire-reports/
