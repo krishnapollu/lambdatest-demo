@@ -1,6 +1,7 @@
 name: LambdaTest Execution
 
 on:
+  workflow_dispatch:
   push: 
     branches: main
 
