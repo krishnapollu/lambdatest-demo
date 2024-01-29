@@ -16,5 +16,6 @@ jobs:
 
       - name: Reports Upload
         uses: actions/upload-artifact@v4
-        with: reports.zip
-        path: /target/surefire-reports/
+        with: 
+          name: reports.zip
+          path: /target/surefire-reports/
