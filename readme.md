@@ -1,4 +1,6 @@
 # lambdatest-demo
+Sample project to demonstrate the use of LambdaTest platform to run automated tests in remote browser sessions.
+This project / test suite uses Selenium + TestNG
 
 ## Configurations
 
