@@ -41,7 +41,7 @@ public class DriverSetup {
         ltOptions.put("accessKey", TestParameters.lt_accessKey);
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
-        ltOptions.put("build", "test-build");
+        ltOptions.put("build", "test-build"+ System.currentTimeMillis());
         ltOptions.put("project", "lambdatest-demo");
         ltOptions.put("smartUI.project", "lambdatest-demo");
         ltOptions.put("console", "true");
