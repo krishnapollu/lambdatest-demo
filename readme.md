@@ -86,5 +86,24 @@ Click on one of the builds and you will be able to see a detailed view of the te
 
 ![Test Details](https://github.com/krishnapollu/lambdatest-demo/blob/main/images/test-details.png)
 
+## Triggering Tests from GitHub Workflow
+Save the LambdaTest account username and accessKey as repository secrets. The tests can be triggered from your workflow as below:
+```yml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Build and Test
+        run: mvn clean test -DLTusername=${{ secrets.LT_USER_NAME }} -DLTestaccessKey=${{ secrets.LT_ACCESS_KEY}} && true
+
+      - name: Reports Upload
+        uses: actions/upload-artifact@v4
+        with: 
+          name: reports.zip
+          path: /target/surefire-reports/
+```
 ## Detailed Documentation
 - [LambdaTest Support Docs](https://www.lambdatest.com/support/docs/)
