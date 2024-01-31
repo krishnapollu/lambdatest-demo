@@ -2,11 +2,6 @@ name: LambdaTest Execution
 
 on:
   workflow_dispatch:
-    inputs: 
-      name: 
-        description: Your name
-        required: true
-        default: krishna
   push: 
     branches: main
 
