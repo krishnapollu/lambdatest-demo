@@ -2,6 +2,9 @@
 Sample project to demonstrate the use of LambdaTest platform to run automated tests in remote browser sessions.
 This project / test suite uses Selenium + TestNG
 
+
+[![LambdaTest Execution](https://github.com/krishnapollu/lambdatest-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/krishnapollu/lambdatest-demo/actions/workflows/ci.yml)
+
 ## Configurations
 
 No additional dependencies specific to LambdaTest need to be added in pom.xml
